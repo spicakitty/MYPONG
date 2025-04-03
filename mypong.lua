@@ -3,7 +3,7 @@
 -- desc:    it's pong
 -- site:    website link
 -- license: MIT License (change this to your license of choice)
--- version: 0.1
+-- version: 0.1.1
 -- script:  lua
 
 t=0
@@ -229,6 +229,8 @@ function game()
 		end
 		initValues()
 		balldy=0
+		if balldx<0 then balldx=-1
+		elseif balldx>0 then balldx=1 end
 		getReady=true
 		nextRoundPause=false
 		return
